@@ -1,8 +1,8 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LandingPage {
@@ -15,28 +15,33 @@ public class LandingPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//div[@class='listbuilder-popup-scale']//button[contains(text(), 'NO THANKS')]") WebElement jonpopup;
-	@FindBy(xpath="//span[contains(text(), 'Login')]") WebElement loginlink;
-	@FindBy(css="section[id='content'] h2") WebElement featuredcourses; // .text-center>h2 - new way to identify the webelement
-	@FindBy(css="[class='navbar-collapse collapse'] li") WebElement navigationbar;
+	By jonpopup = By.xpath("//div[@class='listbuilder-popup-scale']//button[contains(text(), 'NO THANKS')]");
+	By loginlink = By.xpath("//span[contains(text(), 'Login')]");
+	By featuredcourses = By.cssSelector("section[id='content'] h2"); // .text-center>h2 - new way to identify the webelement
+	By navigationbar = By.cssSelector("[class='navbar-collapse collapse'] li");
 	
-	public WebElement jonpopup()
+	public LoginPage jonpopup()
 	{
-		return jonpopup;
+		driver.findElement(jonpopup).click();
+		LoginPage popup = new LoginPage(driver);
+		return popup;
 	}
 	
-	public WebElement loginlink()
+	public LoginPage loginlink()
 	{
-		return loginlink;
+		driver.findElement(loginlink).click();
+		LoginPage lp = new LoginPage(driver);
+		return lp;
 	}
 	
 	public WebElement featuredcourses()
 	{
-		return featuredcourses;
+		return driver.findElement(featuredcourses);
 	}
 	
 	public WebElement navigationbar()
 	{
-		return navigationbar;
+		return driver.findElement(navigationbar);
 	}
+	
 }

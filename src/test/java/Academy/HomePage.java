@@ -8,6 +8,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pageObjects.ForgotPassword;
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 import resources.base;
@@ -27,20 +28,26 @@ public class HomePage extends base {
 	 
 	
 	@Test(dataProvider="getData")
-	public void basePageNavigation(String Username, String Password, String text) throws IOException
+	public void basePageNavigation(String Username, String Password, String text) throws IOException, InterruptedException
 	{
 		driver.get(prop.getProperty("url"));
 		LandingPage l = new LandingPage(driver);
-		l.jonpopup().click();
-		l.loginlink().click();
-		LoginPage lp = new LoginPage(driver); 
+		
+		@SuppressWarnings("unused")
+		LoginPage popup = l.jonpopup();
+		LoginPage lp = l.loginlink();
 		lp.emailaddress().sendKeys(Username);
 		lp.password().sendKeys(Password);
 		lp.emailaddress().sendKeys(Username);
 		lp.password().sendKeys(Password);
-	//	System.out.println("text");
+
 		log.info("text");
+
 		lp.login().click();
+		
+		ForgotPassword fp = lp.forgotpassword();
+		fp.emailaddress().sendKeys("ajay.gupta1711@gmail.com");
+		fp.sendMeInstructions().click();
 	}
 	
 	

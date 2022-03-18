@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +19,14 @@ public class LoginPage {
 		@FindBy(css="[id='user_email']") WebElement emailaddress;
 		@FindBy(css="[id='user_password']") WebElement password;
 		@FindBy(xpath="//input[@type='submit']") WebElement login;
+		By forgotpassword = By.cssSelector("[href*='password/new']");
+		
+		public ForgotPassword forgotpassword()
+		{
+			driver.findElement(forgotpassword).click();
+			return new ForgotPassword(driver);
+			
+		}
 		
 		public WebElement emailaddress()
 		{
@@ -33,5 +42,5 @@ public class LoginPage {
 		{
 			return login;
 		}
-	
+
 }

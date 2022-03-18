@@ -9,6 +9,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.LandingPage;
+import pageObjects.LoginPage;
 import resources.base;
 
 public class ValidateTitle extends base {
@@ -30,14 +31,12 @@ public class ValidateTitle extends base {
 		@Test
 		public void validateAppTitle() throws IOException
 		{
-			LandingPage lp = new LandingPage(driver);
+			LandingPage l = new LandingPage(driver);
+			l.jonpopup();
 			
-			lp.jonpopup().click();
-			
-			Assert.assertEquals(lp.featuredcourses().getText(), "FEATURED COURSES123");
-	
+			Assert.assertEquals(l.featuredcourses().getText(), "FEATURED COURSES123");
+				
 			// Compare the text from the browser with actual test - ERROR..
-			Assert.assertTrue(lp.navigationbar().isDisplayed());
 			log.info("Successfully validated Text message");
 			System.out.println("Test Completed");
 		}
