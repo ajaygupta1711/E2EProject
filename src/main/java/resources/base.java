@@ -12,6 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class base {
 
@@ -24,7 +25,12 @@ public class base {
 		FileInputStream fis = new FileInputStream("C:\\Users\\HP\\eclipse-workspace\\E2EProject\\src\\main\\java\\resources\\data.properties");
 		
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+		
+//mvn test -Dbrowser-chrome
+		
+		String browserName = System.getProperty("browser");		
+		
+//		String browserName = prop.getProperty("browser");
 		System.out.println(browserName);
 		
 		if (browserName.equals("chrome"))
@@ -38,6 +44,12 @@ public class base {
 			// Execute in edge browser
 			System.setProperty("webdriver.edge.driver", "E:\\Selenium with Java\\Software Installs_IMP\\msedgedriver.exe");
 			driver = new EdgeDriver();
+		}
+		else if (browserName.equals("firefox"))
+		{
+			// Execute in edge browser
+			System.setProperty("webdriver.gecko.driver", "E:\\Selenium with Java\\Software Installs_IMP\\geckodriver.exe");
+			driver = new FirefoxDriver();
 		}
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

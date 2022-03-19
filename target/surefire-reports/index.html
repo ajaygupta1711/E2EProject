@@ -118,12 +118,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)">basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.ValidateNavigationBar" hash-for-method="basePageNavigation">basePageNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.ValidateNavigationBar" hash-for-method="basePageNavigation">basePageNavigation</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="Academy.HomePage" hash-for-method="basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)">basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -154,34 +154,10 @@
                   <a name="validateAppTitle">
                   </a> <!-- validateAppTitle -->
                   <span class="method-name">validateAppTitle</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;listbuilder-popup-scale&apos;]//button[contains(text(), &apos;NO THANKS&apos;)]&quot;}
-  (Session info: chrome=99.0.4844.74)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.1.2&apos;, revision: &apos;9a5a329c5a&apos;
-System info: host: &apos;5CG1265QHJ&apos;, ip: &apos;192.168.1.4&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f939665f78b3977e6eb41b91131cb2e7, findElement {using=xpath, value=//div[@class=&apos;listbuilder-popup-scale&apos;]//button[contains(text(), &apos;NO THANKS&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.74, chrome: {chromedriverVersion: 98.0.4758.80 (7f0488e8ba0d8..., userDataDir: C:\Users\HP\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:65432}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65432/devtoo..., se:cdpVersion: 99.0.4844.74, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: f939665f78b3977e6eb41b91131cb2e7
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:558)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:382)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at pageObjects.LandingPage.jonpopup(LandingPage.java:25)
-	at Academy.ValidateTitle.validateAppTitle(ValidateTitle.java:35)
+                  <div class="stack-trace">java.lang.AssertionError: expected [FEATURED COURSES123] but found [FEATURED COURSES]
+	at Academy.ValidateTitle.validateAppTitle(ValidateTitle.java:36)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:750)
-... Removed 22 stack frames
+... Removed 37 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -242,26 +218,26 @@ Session ID: f939665f78b3977e6eb41b91131cb2e7
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Academy.Listeners&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;App Testing&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;App Testing&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Academy.AppTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- App Testing --&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating navigation bar&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating navigation bar&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Academy.ValidateNavigationBar&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Validating navigation bar --&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating title in the page&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating title in the page&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Academy.ValidateTitle&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Validating title in the page --&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating User Login&quot; parallel=&quot;tests&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Validating User Login&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;Academy.HomePage&quot;/&gt;
     &lt;/classes&gt;
@@ -316,24 +292,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'basePageNavigation')
 data.setCell(0, 2, 'Academy.HomePage')
-data.setCell(0, 3, 20596);
+data.setCell(0, 3, 25650);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'validateAppTitle')
 data.setCell(1, 2, 'Academy.ValidateTitle')
-data.setCell(1, 3, 10040);
+data.setCell(1, 3, 2967);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'basePageNavigation')
 data.setCell(2, 2, 'Academy.ValidateNavigationBar')
-data.setCell(2, 3, 249);
+data.setCell(2, 3, 440);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'shouldAnswerWithTrue')
 data.setCell(3, 2, 'Academy.AppTest')
-data.setCell(3, 3, 10);
+data.setCell(3, 3, 25);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -359,72 +335,57 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">initialize</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">initialize</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.HomePage</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">initialize</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">Academy.AppTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">shouldAnswerWithTrue</span>
-                <span class="method-start">22 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.HomePage</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)</span>
-                <span class="method-start">4319 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">789 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">basePageNavigation</span>
-                <span class="method-start">24780 ms</span>
+                <span class="method-start">34032 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.HomePage</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">24915 ms</span>
-              </div> <!-- configuration-test after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Academy.ValidateNavigationBar</div> <!-- chronological-class-name -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">25030 ms</span>
+                <span class="method-start">34474 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Academy.ValidateTitle</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">34963 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">validateAppTitle</span>
-                <span class="method-start">31513 ms</span>
+                <span class="method-start">53438 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">41795 ms</span>
+                <span class="method-start">57531 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Academy.HomePage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">57831 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">basePageNavigation(nonrestricteduser@qw.com, 123456, Non-Restricted User)</span>
+                <span class="method-start">61596 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">87247 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

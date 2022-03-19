@@ -8,14 +8,13 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-
 import resources.ExtentReporterNG;
 import resources.base;
 
 public class Listeners extends base implements ITestListener {
 
 	ExtentTest test;
-	ExtentReports extent = ExtentReporterNG.getReportObject();
+	ExtentReports extent = ExtentReporterNG.getReportObject(); 
 	ThreadLocal <ExtentTest> extentTest = new ThreadLocal <ExtentTest> ();
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
@@ -77,9 +76,8 @@ public class Listeners extends base implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
-		extent.flush();
+	extent.flush();
 	}
-	
 	
 
 }

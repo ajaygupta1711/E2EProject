@@ -2,20 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-18T18:20:05 IST" name="Default suite" finished-at="2022-03-18T18:20:11 IST" duration-ms="5734">
+  <suite started-at="2022-03-19T15:29:41 IST" name="Default suite" finished-at="2022-03-19T15:29:41 IST" duration-ms="35">
     <groups>
     </groups>
-    <test started-at="2022-03-18T18:20:05 IST" name="Default test" finished-at="2022-03-18T18:20:11 IST" duration-ms="5734">
-      <class name="resources.ExtentReporterNG">
-        <test-method is-config="true" signature="getReportObject()[pri:0, instance:resources.ExtentReporterNG@6404f418]" started-at="2022-03-18T18:20:05 IST" name="getReportObject" finished-at="2022-03-18T18:20:06 IST" duration-ms="276" status="PASS">
+    <test started-at="2022-03-19T15:29:41 IST" name="Default test" finished-at="2022-03-19T15:29:41 IST" duration-ms="35">
+      <class name="Academy.AppTest">
+        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:Academy.AppTest@16610890]" started-at="2022-03-19T15:29:41 IST" name="shouldAnswerWithTrue" finished-at="2022-03-19T15:29:41 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getReportObject -->
-        <test-method signature="initialDemo()[pri:0, instance:resources.ExtentReporterNG@6404f418]" started-at="2022-03-18T18:20:06 IST" name="initialDemo" finished-at="2022-03-18T18:20:11 IST" duration-ms="5432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialDemo -->
-      </class> <!-- resources.ExtentReporterNG -->
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- Academy.AppTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
