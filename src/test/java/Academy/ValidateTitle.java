@@ -14,6 +14,7 @@ import resources.base;
 public class ValidateTitle extends base {
 	
 	public WebDriver driver;
+	public LandingPage l;
 
 	public static Logger log = (Logger) LogManager.getLogger(base.class.getName());  
 	
@@ -30,7 +31,9 @@ public class ValidateTitle extends base {
 		@Test
 		public void validateAppTitle() throws IOException
 		{
-			LandingPage l = new LandingPage(driver);
+			// One is inheritance
+			// Creating object to that class and invoke methods of it.
+			l = new LandingPage(driver);
 			l.jonpopup();
 			
 			Assert.assertEquals(l.featuredcourses().getText(), "FEATURED COURSES123");
@@ -38,6 +41,12 @@ public class ValidateTitle extends base {
 			// Compare the text from the browser with actual test - ERROR..
 			log.info("Successfully validated Text message");
 			System.out.println("Test Completed");
+		}
+		
+		@Test
+		public void validateheader()
+		{
+			Assert.assertEquals(l.header().getText(), "AN ACADEMY TO LEARN EVERYTHING ABOUT TESTING");
 		}
 		
 		

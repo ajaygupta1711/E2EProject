@@ -15,10 +15,11 @@ public class LandingPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	By jonpopup = By.xpath("//div[@class='listbuilder-popup-scale']//button[contains(text(), 'NO THANKS')]");
-	By loginlink = By.xpath("//span[contains(text(), 'Login')]");
-	By featuredcourses = By.cssSelector("section[id='content'] h2"); // .text-center>h2 - new way to identify the webelement
-	By navigationbar = By.cssSelector("[class='navbar-collapse collapse'] li");
+	private By jonpopup = By.xpath("//div[@class='listbuilder-popup-scale']//button[contains(text(), 'NO THANKS')]");
+	private By loginlink = By.xpath("//span[contains(text(), 'Login')]");
+	private By featuredcourses = By.cssSelector("section[id='content'] h2"); // .text-center>h2 - new way to identify the webelement
+	private By navigationbar = By.cssSelector("[class='navbar-collapse collapse'] li");
+	private By header = By.cssSelector("[id='banner'] h3");
 	
 	public LoginPage jonpopup()
 	{
@@ -36,12 +37,18 @@ public class LandingPage {
 	
 	public WebElement featuredcourses()
 	{
+		System.out.println("Try to identify the navigation bar");
 		return driver.findElement(featuredcourses);
 	}
 	
 	public WebElement navigationbar()
 	{
 		return driver.findElement(navigationbar);
+	}
+	
+	public WebElement header()
+	{
+		return driver.findElement(header);
 	}
 	
 }
